@@ -1,0 +1,119 @@
+---
+title: "Classwork Worksheet 1"
+output: html_document
+author: TASHAE DEWALT
+date: "2026-07-14"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Questions
+
+1.What dataset are you working with for your final and provide a brief synopsis of what it contains? 
+
+```{r}
+#Art History
+#Assess the demographic representation of artists through two popular textbooks and museums
+```
+
+2. What is a research question of interest to you relating to this data? Provide the question in a PICO format: Problem/Population Intervention/Exposure Comparison Outcome. https://pmc-ncbi-nlm-nih-gov.ezproxy.med.nyu.edu/articles/PMC11129835/ 
+
+```{r}
+#Probelm: The lack of visibility and representation transcends medicine, this can increases about minority populations
+#Intervention: Using an art dataset for easier relatibility of subject, will then discuss similiarities of this to the world of research, science, and medicine
+#Comparison: The exposure of differen ethnic backgroups in a medium outside of medicine, show how they are connected or how one can impact the other
+#Outcome: Build upon this dataset for possible STEAM students/ people (Me), where the worlds may not converse much, this is a great opportunity to encourage both and increase inclusivity and trust of minority populations, especially here in America
+```
+
+
+3. Does this question meet the FINER criteria? Break down letter by letter to demonstrate. https://pmc-ncbi-nlm-nih-gov.ezproxy.med.nyu.edu/articles/PMC11129835/
+
+```{r}
+# Feasible? yes Interesting? yesss! Novel? yes Ethical? yes Relevant? Yes!! :)
+```
+
+
+
+4. What variables are relevant to your research question?
+
+```{r}
+# demographic metrics, and visibility within gievn research topic
+```
+
+
+5. Demonstrate how you would use ifelse() to make a given continuous variable into a dichtomous factor variable
+
+```{r}
+# if (year =< 1970){
+#   print ('Modern Art Era')
+# ifelse 
+#   print('Contemporary Art Era')
+# }
+```
+
+
+
+
+
+## NYC HANES Diabetes subset Questions
+
+Data can be accessed at: https://raw.githubusercontent.com/fredlapolla/VilcekSummer26/refs/heads/main/NYC_HANES_DIAB.csv
+
+6. Use apply() to find the median value of CADMIUM, LEAD CHOLESTEROLTOTAL, GLUCOSESI, CREATININESI, and CREATININE
+
+```{r}
+# apply(nyc[,11:18]), 2,median, na.rm = TRUE)
+# answers : 
+#   CADMIUM:0.2936  LEAD:1.056  CHOLTTL: 183.000  GLUC: 4.88  CREATININESI: 70.72 CREATININE: 0.800
+```
+
+
+7.  Do the same using sapply()
+
+```{r}
+# sapply(nyc[,11:19], median, na.rm = T)
+# because it is sapply, i can take out the column bc it only runs on columns :)
+```
+
+8. Use a for loop to find the median value of columns 16:19
+
+```{r}
+#   for (i in 16:19){
+#   value <- median(nyc[,i], na.rm = T)
+#   print(c(colnames(nyc[i]), value))
+#}
+# ANSWERS:
+#   CHOL: 183, GLUC: 4.88, CREATINNINES: 70.72, 
+# CREATININE: 0.8
+```
+
+
+9. Make a for loop to find the standard deviation (hint sd() ) of CHOLESTEROLTOTAL, GLUCOSESI, CREATININESI, AND CREATININE
+
+```{r}
+#for (i in 16:19){
+#   value <- sd(nyc[,i], na.rm = T)
+#   print(c(colnames(nyc[i]), value))
+# ANSWERS:
+#   CHOL: 38.68, GLUC: 1.67, CREATINNINES: 26.51, 
+# CREATININE: 0.29
+```
+
+
+
+
+10. Use ifelse to create a new variable of high and normal A1C dichotomizing with 7 as a threshold for high levels
+
+```{r}
+# nyc <- na.omit(nyc)
+# nyc$HIGHA1C<- ifelse(nyc$A1C > 7,  1,  0)
+# nyc$HIGHA1C <- factor(nyc$HiChol)
+# summary(nyc$HIGHA1C)
+
+# I DONT KNOW SRY 
+
+```
